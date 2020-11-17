@@ -4,9 +4,10 @@ README
 
 ****
 	
-|Author|果冻虾仁|
+|作者|果冻虾仁|
 |---|---
-|E-mail|Jelly.K.Wang@qq.com
+|知乎|[![zhihu-shield]][zhihu]
+|公众号|编程往事
 
 
 ****
@@ -136,12 +137,12 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 |#|语法|效果|
 |---|---|----
 |1|`![baidu](http://www.baidu.com/img/bdlogo.gif "百度logo")`|![baidu](http://www.baidu.com/img/bdlogo.gif "百度logo")
-|2|`![][foryou]`|![][foryou]
+|2|`![][code-past]`|![][code-past]
 
 注意例2的写法使用了**URL标识符**的形式，在[链接](#链接)一节有介绍。
->在文末有foryou的定义：
+>在文末有code-past的定义：
 ```
-[foryou]:https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
+[code-past]:/img/codepast-logo.jpg "公众号：编程往事"
 ```
 
 链接
@@ -157,7 +158,7 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 - 第一部分使用两个中括号，[ ]里的标识符（本例中zhihu），可以是数字，字母等的组合，标识符上下对应就行了（**姑且称之为URL标识符**）
 - 第二部分标记实际URL。
 
->使用URL标识符能达到复用的目的，一般把全文所有的URL标识符统一放在文章末尾，这样看起来比较干净。
+>使用URL标识符能达到复用的目的，一般把全文所有的URL标识符统一放在文章末尾，这样看起来比较干净。除了干净之外，它还能达到复用的目的，比如你在多个地方想使用同一个链接，那么文内使用标识符，只在最底部给标识符定义出实际的URL链接即可，类似编程语言中的变量。
 >>URL标识符是我起的名字，不知道是否准确。囧。。
 
 ### 链接本仓库里的URL
@@ -165,7 +166,7 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 |语法|效果|
 |----|-----|
 |`[我的简介](/example/profile.md)`|[我的简介](/example/profile.md)|
-|`[Book](./Book)`|[Book](/Book)|
+|`[example](./example)`|[example](./example)|
 
 ### 图片链接
 给图片加链接的本质是混合图片显示语法和普通的链接语法。普通的链接中[ ]内部是链接要显示的文本，而图片链接[ ]里面则是要显示的图片。  
@@ -193,18 +194,41 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 
 ## 列表
 ### 无序列表
+#### 语法
+```
+* 昵称：果冻虾仁
+- 别名：隔壁老王
+* 英文名：Jelly
+```
+#### 效果
 * 昵称：果冻虾仁
 - 别名：隔壁老王
 * 英文名：Jelly
 
 ### 多级无序列表
+#### 语法
+```
+* 编程语言
+    * 脚本语言
+        * Python
+```
+#### 效果
 * 编程语言
     * 脚本语言
         * Python
 
-### 有序列表
-#### 一般效果
-就是在数字后面加一个点，再加一个空格。不过看起来起来可能不够明显。    
+### 一级有序列表
+#### 语法
+就是在数字后面加一个点，再加一个空格。不过看起来起来可能不够明显。 
+```
+面向对象的三个基本特征：
+
+1. 封装
+2. 继承
+3. 多态
+```
+
+#### 效果
 面向对象的三个基本特征：
 
 1. 封装
@@ -212,8 +236,16 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 3. 多态
 
 
-#### 多级有序列表
-和无序列表一样，有序列表也有多级结构：  
+### 多级有序列表
+和无序列表一样，有序列表也有多级结构。
+#### 语法
+```
+1. 这是一级的有序列表，数字1还是1
+   1. 这是二级的有序列表，阿拉伯数字在显示的时候变成了罗马数字
+      1. 这是三级的有序列表，数字在显示的时候变成了英文字母
+```
+
+#### 效果
 
 1. 这是一级的有序列表，数字1还是1
    1. 这是二级的有序列表，阿拉伯数字在显示的时候变成了罗马数字
@@ -221,6 +253,17 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 	 
 
 ### 复选框列表
+#### 语法
+```
+- [x] 需求分析
+- [x] 系统设计
+- [x] 详细设计
+- [ ] 编码
+- [ ] 测试
+- [ ] 交付
+```
+#### 效果
+
 - [x] 需求分析
 - [x] 系统设计
 - [x] 详细设计
@@ -242,6 +285,15 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 “……下面我要告诉你的是，Lilliput和Blefuscu这两大强国在过去36个月里一直在苦战。战争开始是由于以下的原因：我们大家都认为，吃鸡蛋前，原始的方法是打破鸡蛋较大的一端，可是当今的皇帝的祖父小时候吃鸡蛋，一次按古法打鸡蛋时碰巧将一个手指弄破了，因此他的父亲，当时的皇帝，就下了一道敕令，命令全体臣民吃鸡蛋时打破较小的一端，违令者重罚。”
 
 ### 块引用有多级结构
+#### 语法
+```
+> 数据结构
+>> 树
+>>> 二叉树
+>>>> 平衡二叉树
+>>>>> 满二叉树
+```
+#### 效果
 > 数据结构
 >> 树
 >>> 二叉树
@@ -250,7 +302,11 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 
 代码高亮
 ----------
+
+### 语法
 在三个反引号后面加上编程语言的名字，另起一行开始写代码，最后一行再加上三个反引号。
+
+### 效果
 ```Java
 public static void main(String[]args){} //Java
 ```
@@ -318,24 +374,26 @@ diff语法
 ---------
 版本控制的系统中都少不了diff的功能，即展示一个文件内容的增加与删除。
 GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示删除。
-
+#### 语法
 其语法与代码高亮类似，只是在三个反引号后面写diff，
-并且其内容中，以 `+ `开头表示新增，`- `开头表示删除。
+并且其内容中，可以用 `+ `开头表示新增，`- `开头表示删除。
+另外还有有 `!`和`#`的语法。
 
-效果如下：
+#### 效果
 
 ```diff
-+ 鸟宿池边树，僧敲月下门
-- 鸟宿池边树，僧推月下门
++ 人闲桂花落，
+- 夜静春山空。
+! 月出惊山鸟，
+# 时鸣春涧中。
 ```
-
-
 
 --------------------------------
 [csdn]:http://blog.csdn.net/guodongxiaren "我的博客"
-[zhihu]:https://www.zhihu.com/people/jellywong "我的知乎，欢迎关注"
+[zhihu]:https://www.zhihu.com/people/guodongxiaren "我的知乎，欢迎关注"
 [weibo]:http://weibo.com/linpiaochen
 [baidu-logo]:http://www.baidu.com/img/bdlogo.gif "百度logo"
 [weibo-logo]:/img/weibo.png "点击图片进入我的微博"
 [csdn-logo]:/img/csdn.png "我的CSDN博客"
-[foryou]:https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
+[code-past]:/img/codepast-logo.jpg "公众号：编程往事"
+[zhihu-shield]:https://img.shields.io/badge/dynamic/json?color=0084ff&logo=zhihu&label=%E6%9E%9C%E5%86%BB%E8%99%BE%E4%BB%81&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dzhihu%26queryKey%3Dguodongxiaren
